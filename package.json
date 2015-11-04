@@ -1,0 +1,11 @@
+{
+  "name": "react-native-android-map-view",
+  "version": "0.0.1",
+  "private": true,
+  "files": [
+    "index.android.js",
+    "index.ios.js",
+    "android/",
+    "ios/"
+  ]
+}
