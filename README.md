@@ -1,5 +1,14 @@
 # AndroidMapView for ReactNative
 
+## Usage
+
+
+See [index.android.js](https://github.com/luggg/react-native-android-map-view/blob/master/index.android.js)
+
+See [Example/index.android.js](https://github.com/luggg/react-native-android-map-view/blob/master/Example/index.android.js)
+
+--
+
 ## Installation
 
 #### Step 1
