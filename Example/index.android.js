@@ -12,15 +12,20 @@ var {
   StyleSheet,
   Text,
   View,
+  NativeModules
 } = React;
 
 var Example = React.createClass({
   render: function() {
     return (
       <View style={styles.container}>
-        <MapViewAndroid style={styles.map}/>
+        <MapViewAndroid ref={"map"} style={styles.map} onRegionChangeComplete={this.onRegionChangeComplete}/>
       </View>
     );
+  },
+
+  onRegionChangeComplete(stuff) {
+    console.log(stuff);
   }
 });
 
