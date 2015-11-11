@@ -67,7 +67,7 @@ public class ReactMapViewManager extends SimpleViewManager<MapView> {
   }
 
   @ReactProp(name = PROP_SHOWS_USER_LOCATION, defaultBoolean = true)
-  public void setShowsUserLocation(MapView view, final boolean showsUserLocation) {
+  public void setShowsUserLocation(MapView view, boolean showsUserLocation) {
     GoogleMap map = view.getMap();
 
     if (map != null) {
@@ -77,7 +77,7 @@ public class ReactMapViewManager extends SimpleViewManager<MapView> {
   }
 
   @ReactProp(name = PROP_ROTATE_ENABLED, defaultBoolean = false)
-  public void setRotateEnabled(MapView view, final boolean rotateEnabled) {
+  public void setRotateEnabled(MapView view, boolean rotateEnabled) {
     GoogleMap map = view.getMap();
 
     if (map != null) {
@@ -86,7 +86,7 @@ public class ReactMapViewManager extends SimpleViewManager<MapView> {
   }
 
   @ReactProp(name = PROP_SCROLL_ENABLED, defaultBoolean = true)
-  public void setScrollEnabled(MapView view, final boolean scrollEnabled) {
+  public void setScrollEnabled(MapView view, boolean scrollEnabled) {
     GoogleMap map = view.getMap();
 
     if (map != null) {
@@ -95,7 +95,7 @@ public class ReactMapViewManager extends SimpleViewManager<MapView> {
   }
 
   @ReactProp(name = PROP_ZOOM_ENABLED, defaultBoolean = true)
-  public void setZoomEnabled(MapView view, final boolean zoomEnabled) {
+  public void setZoomEnabled(MapView view, boolean zoomEnabled) {
     GoogleMap map = view.getMap();
 
     if (map != null) {
@@ -112,7 +112,7 @@ public class ReactMapViewManager extends SimpleViewManager<MapView> {
   }
 
   @Override
-  protected void addEventEmitters(ThemedReactContext reactContext, final MapView view) {
+  protected void addEventEmitters(ThemedReactContext reactContext, MapView view) {
     final GoogleMap map = view.getMap();
     if (map == null) return;
 
