@@ -59,6 +59,11 @@ public class ReactMapViewManager extends SimpleViewManager<MapView> {
     view.onCreate(null);
     view.onResume();
 
+    // This is so so shitty but since I can't seem to figure out
+    // how to lookup views through a NativeModule we'll just store
+    // it as a static var on Helper
+    Helper.setMapView(mMapView);
+
     if (view.getMap(); == null) {
       logError("GoogleMap is null. It's likely Google Play Services is not installed.");
     }
