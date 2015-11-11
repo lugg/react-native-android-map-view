@@ -39,6 +39,14 @@ var MapViewAndroid = React.createClass({
     this.props.onUserLocationUpdate && this.props.onUserLocationUpdate(event.nativeEvent);
   },
 
+  setCenterCoordinate(latitude, longitude) {
+    NativeModules.MapViewAndroid.setCenterCoordinate(latitude, longitude);
+  },
+
+  setCenterCoordinateAnimated(latitude, longitude) {
+    NativeModules.MapViewAndroid.setCenterCoordinateAnimated(latitude, longitude);
+  },
+
   render() {
     return (
       <NativeMapView
