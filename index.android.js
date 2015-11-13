@@ -52,7 +52,7 @@ var MapViewAndroid = React.createClass({
   },
 
   setCenterCoordinateAnimated(latitude, longitude) {
-    RCTUIManager.dispatchViewCommand(
+    RCTUIManager.dispatchViewManagerCommand(
       React.findNodeHandle(this),
       RCTUIManager.MapViewAndroid.Commands.setCenterCoordinate,
       [latitude, longitude, true]
@@ -60,7 +60,7 @@ var MapViewAndroid = React.createClass({
   },
 
   setZoomLevel(zoom) {
-    RCTUIManager.dispatchViewCommand(
+    RCTUIManager.dispatchViewManagerCommand(
       React.findNodeHandle(this),
       RCTUIManager.MapViewAndroid.Commands.setZoomLevel,
       [zoom, false]
@@ -68,7 +68,7 @@ var MapViewAndroid = React.createClass({
   },
 
   setZoomLevelAnimated(zoom) {
-    RCTUIManager.dispatchViewCommand(
+    RCTUIManager.dispatchViewManagerCommand(
       React.findNodeHandle(this),
       RCTUIManager.MapViewAndroid.Commands.setZoomLevel,
       [zoom, true]
@@ -76,7 +76,7 @@ var MapViewAndroid = React.createClass({
   },
 
   setCenterCoordinateZoomLevel(latitude, longitude, zoom) {
-    RCTUIManager.dispatchViewCommand(
+    RCTUIManager.dispatchViewManagerCommand(
       React.findNodeHandle(this),
       RCTUIManager.MapViewAndroid.Commands.setCenterCoordinateZoomLevel,
       [latitude, longitude, zoom, false]
@@ -84,7 +84,7 @@ var MapViewAndroid = React.createClass({
   },
 
   setCenterCoordinateZoomLevelAnimated(latitude, longitude, zoom) {
-    RCTUIManager.dispatchViewCommand(
+    RCTUIManager.dispatchViewManagerCommand(
       React.findNodeHandle(this),
       RCTUIManager.MapViewAndroid.Commands.setCenterCoordinateZoomLevel,
       [latitude, longitude, zoom, true]
