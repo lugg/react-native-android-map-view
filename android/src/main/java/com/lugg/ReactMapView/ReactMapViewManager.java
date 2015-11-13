@@ -21,15 +21,12 @@ import com.facebook.react.ReactPackage;
 import com.facebook.react.bridge.NativeModule;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.JavaScriptModule;
-import com.facebook.react.bridge.ReactMethod;
-import com.facebook.react.bridge.UiThreadUtil;
 import com.facebook.react.bridge.ReadableArray;
 import com.facebook.react.uimanager.SimpleViewManager;
 import com.facebook.react.uimanager.UIManagerModule;
 import com.facebook.react.uimanager.ThemedReactContext;
 import com.facebook.react.uimanager.ReactProp;
 import com.facebook.react.uimanager.events.EventDispatcher;
-import com.facebook.react.common.MapBuilder;
 import com.facebook.react.common.MapBuilder;
 
 import com.lugg.ReactMapView.events.RegionChangeEvent;
