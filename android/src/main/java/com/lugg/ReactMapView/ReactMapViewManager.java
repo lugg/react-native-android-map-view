@@ -42,8 +42,8 @@ public class ReactMapViewManager extends SimpleViewManager<MapView> {
   private static final String PROP_ZOOM_ENABLED = "zoomEnabled";
 
   public static final int COMMAND_SET_CENTER_COORDINATE = 1;
-  public static final int COMMAND_SET_ZOOM_LEVEL = 3;
-  public static final int COMMAND_SET_CENTER_COORDINATE_ZOOM_LEVEL = 5;
+  public static final int COMMAND_SET_ZOOM_LEVEL = 2;
+  public static final int COMMAND_SET_CENTER_COORDINATE_ZOOM_LEVEL = 3;
 
   private static final String LOG_TAG = "ReactNative";
 
