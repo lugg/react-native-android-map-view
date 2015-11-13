@@ -15,9 +15,7 @@ import android.util.Log;
 public class ReactMapViewPackage implements ReactPackage {
     @Override
     public List<NativeModule> createNativeModules(ReactApplicationContext reactContext) {
-      return Arrays.<NativeModule>asList(
-        new ReactMapViewModule(reactContext)
-      );
+        return Collections.emptyList();
     }
 
     @Override
