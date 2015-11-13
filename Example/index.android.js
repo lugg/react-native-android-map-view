@@ -24,8 +24,9 @@ var Example = React.createClass({
     );
   },
 
-  onRegionChangeComplete(stuff) {
-    console.log(stuff);
+  onRegionChangeComplete(location) {
+    // this.refs['map'].setCenterCoordinate(0, 0);
+    console.log(location);
   }
 });
 
