@@ -1,4 +1,6 @@
-# AndroidMapView for ReactNative
+# MapViewAndroid for ReactNative
+
+This is very much a work in progress.
 
 ## Usage
 
@@ -8,33 +10,28 @@ See [Example/index.android.js](https://github.com/luggg/react-native-android-map
 
 ---
 
-## Installation
+## Setup
 
-#### Step 1
+1. Include this module in `android/settings.gradle`:
 
-*android/settings.gradle*
-
-```
+```java
 ...
 include ':com.lugg.ReactMapView', ':app'
 project(':com.lugg.ReactMapView').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-android-map-view/android')
 ```
 
-#### Step 2
-*android/app/build.gradle*
+2. Add a dependency to your app build in `android/app/build.gradle`:
 
-```
+```java
 dependencies {
     ...
     compile project(':com.lugg.ReactMapView')
 }
 ```
 
-#### Step 3
+3. Change your main activity to add a new package, in `android/app/src/main/.../MainActivity.java`:
 
-*android/app/src/main/...../MainActivity.java*
-
-```
+```java
 ...
 import com.lugg.ReactMapView.ReactMapViewPackage;
 
@@ -62,13 +59,17 @@ public class MainActivity extends Activity implements DefaultHardwareBackBtnHand
 
 ```
 
-#### Step 4
+4. Add your Google Maps API key.
 
-*android/app/src/main/AndroidManifest.xml*
-
+```shell
+$ mv Example/android/app/src/main/res/values/strings.xml.example Example/android/app/src/main/res/values/strings.xml
 ```
-<uses-library android:name="com.google.android.maps" />
-<meta-data
-    android:name="com.google.android.geo.API_KEY"
-    android:value="YOUR_API_KEY"/>
+
+```xml
+<resources>
+    <string name="app_name">Example</string>
+    <string name="google_maps_key" translatable="false" templateMergeStrategy="preserve">
+      YOUR_GOOGLE_MAPS_API_KEY
+    </string>
+</resources>
 ```
