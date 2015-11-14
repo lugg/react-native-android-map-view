@@ -210,6 +210,7 @@ public class ReactMapViewManager extends SimpleViewManager<MapView> {
           args.getDouble(1),
           new Double(args.getDouble(2)).floatValue(),
           args.getBoolean(3));
+        return;
       }
       default: {
         throw new IllegalArgumentException(String.format(
