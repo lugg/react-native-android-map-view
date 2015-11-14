@@ -32,3 +32,6 @@ local.properties
 #
 node_modules/
 npm-debug.log
+
+# Example app
+Example/android/app/src/main/res/values/strings.xml
