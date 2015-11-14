@@ -12,7 +12,9 @@ See [Example/index.android.js](https://github.com/luggg/react-native-android-map
 
 ## Setup
 
-1. Include this module in `android/settings.gradle`:
+#### Step 1
+
+Include this module in `android/settings.gradle`:
 
 ```java
 ...
@@ -20,7 +22,9 @@ include ':com.lugg.ReactMapView', ':app'
 project(':com.lugg.ReactMapView').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-android-map-view/android')
 ```
 
-2. Add a dependency to your app build in `android/app/build.gradle`:
+#### Step 2
+
+Add a dependency to your app build in `android/app/build.gradle`:
 
 ```java
 dependencies {
@@ -29,12 +33,13 @@ dependencies {
 }
 ```
 
-3. Change your main activity to add a new package, in `android/app/src/main/.../MainActivity.java`:
+#### Step 3
+
+Change your main activity to add a new package, in `android/app/src/main/.../MainActivity.java`:
 
 ```java
 ...
 import com.lugg.ReactMapView.ReactMapViewPackage;
-
 ...
 
 public class MainActivity extends Activity implements DefaultHardwareBackBtnHandler {
@@ -58,8 +63,8 @@ public class MainActivity extends Activity implements DefaultHardwareBackBtnHand
                 .build();
 
 ```
-
-4. Add your Google Maps API key.
+#### Step 4
+Add your Google Maps API key.
 
 ```shell
 $ mv Example/android/app/src/main/res/values/strings.xml.example Example/android/app/src/main/res/values/strings.xml
