@@ -63,8 +63,7 @@ public class MainActivity extends Activity implements DefaultHardwareBackBtnHand
                 .build();
 
 ```
-#### Step 4
-Add your Google Maps API key.
+#### To build and run the example application add your Google Maps API key.
 
 ```shell
 $ mv Example/android/app/src/main/res/values/strings.xml.example Example/android/app/src/main/res/values/strings.xml
