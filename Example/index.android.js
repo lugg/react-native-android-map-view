@@ -16,10 +16,17 @@ var {
 } = React;
 
 var Example = React.createClass({
+  componentDidMount: function() {
+    this.refs.map.setCenterCoordinateZoomLevel(37.781, -122.395, 15);
+  },
+
   render: function() {
     return (
       <View style={styles.container}>
-        <MapViewAndroid ref={"map"} style={styles.map} onRegionChangeComplete={this.onRegionChangeComplete}/>
+        <MapViewAndroid
+          ref="map"
+          style={styles.map}
+          onRegionChangeComplete={this.onRegionChangeComplete}/>
       </View>
     );
   },
