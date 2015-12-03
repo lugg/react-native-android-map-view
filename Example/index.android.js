@@ -19,7 +19,10 @@ var Example = React.createClass({
   render: function() {
     return (
       <View style={styles.container}>
-        <MapViewAndroid ref={"map"} style={styles.map} onRegionChangeComplete={this.onRegionChangeComplete}/>
+        <MapViewAndroid
+          ref="map"
+          style={styles.map}
+          onRegionChangeComplete={this.onRegionChangeComplete}/>
       </View>
     );
   },
