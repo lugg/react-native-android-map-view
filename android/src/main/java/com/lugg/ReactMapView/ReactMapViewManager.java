@@ -51,7 +51,6 @@ public class ReactMapViewManager extends SimpleViewManager<MapView> {
   // Increase the value to zoom in. Not all areas have tiles at the largest zoom levels.
   private static final float DEFAULT_ZOOM_LEVEL = 12.0f;
 
-  private boolean mFollowsUserLocation = true;
   private boolean mMapLoaded = false;
 
   @Override
@@ -147,17 +146,6 @@ public class ReactMapViewManager extends SimpleViewManager<MapView> {
     map.setOnMyLocationChangeListener(new GoogleMap.OnMyLocationChangeListener() {
       @Override
       public void onMyLocationChange(Location location) {
-        // https://github.com/facebook/react-native/blob/master/React/Views/RCTMapManager.m#L115
-        if (mFollowsUserLocation) {
-          map.moveCamera(CameraUpdateFactory.newLatLngZoom(
-            new LatLng(location.getLatitude(), location.getLongitude()),
-            DEFAULT_ZOOM_LEVEL
-          ));
-
-          // Move to user location only for the first time it loads up.
-          mFollowsUserLocation = false;
-        }
-
         eventDispatcher.dispatchEvent(
           new UserLocationUpdateEvent(view.getId(), SystemClock.uptimeMillis(), location)
         );
