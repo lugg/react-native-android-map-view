@@ -1,17 +1,10 @@
 'use strict'
 
-var React = require('react-native');
-var {
-  NativeMethodsMixin,
-  PropTypes,
-  NativeModules,
-  requireNativeComponent
-} = React;
+import React, { Component, PropTypes } from 'react';
+import { NativeMethodsMixin, NativeModules, requireNativeComponent } from 'react-native';
 
 var RCTUIManager = NativeModules.UIManager;
-
 var NativeMapView = requireNativeComponent('MapViewAndroid', null);
-
 var MAP_VIEW_REF = 'mapView';
 
 var MapViewAndroid = React.createClass({
