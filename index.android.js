@@ -1,7 +1,7 @@
 'use strict'
 
 import React, { Component, PropTypes } from 'react';
-import { NativeMethodsMixin, NativeModules, requireNativeComponent } from 'react-native';
+import { NativeMethodsMixin, NativeModules, requireNativeComponent, findNodeHandle } from 'react-native';
 
 var RCTUIManager = NativeModules.UIManager;
 var NativeMapView = requireNativeComponent('MapViewAndroid', null);
@@ -46,7 +46,7 @@ var MapViewAndroid = React.createClass({
 
   setCenterCoordinateAnimated(latitude, longitude) {
     RCTUIManager.dispatchViewManagerCommand(
-      React.findNodeHandle(this),
+      findNodeHandle(this),
       RCTUIManager.MapViewAndroid.Commands.setCenterCoordinate,
       [latitude, longitude, true]
     );
@@ -54,7 +54,7 @@ var MapViewAndroid = React.createClass({
 
   setZoomLevel(zoom) {
     RCTUIManager.dispatchViewManagerCommand(
-      React.findNodeHandle(this),
+      findNodeHandle(this),
       RCTUIManager.MapViewAndroid.Commands.setZoomLevel,
       [zoom, false]
     );
@@ -62,7 +62,7 @@ var MapViewAndroid = React.createClass({
 
   setZoomLevelAnimated(zoom) {
     RCTUIManager.dispatchViewManagerCommand(
-      React.findNodeHandle(this),
+      findNodeHandle(this),
       RCTUIManager.MapViewAndroid.Commands.setZoomLevel,
       [zoom, true]
     );
@@ -70,7 +70,7 @@ var MapViewAndroid = React.createClass({
 
   setCenterCoordinateZoomLevel(latitude, longitude, zoom) {
     RCTUIManager.dispatchViewManagerCommand(
-      React.findNodeHandle(this),
+      findNodeHandle(this),
       RCTUIManager.MapViewAndroid.Commands.setCenterCoordinateZoomLevel,
       [latitude, longitude, zoom, false]
     );
@@ -78,7 +78,7 @@ var MapViewAndroid = React.createClass({
 
   setCenterCoordinateZoomLevelAnimated(latitude, longitude, zoom) {
     RCTUIManager.dispatchViewManagerCommand(
-      React.findNodeHandle(this),
+      findNodeHandle(this),
       RCTUIManager.MapViewAndroid.Commands.setCenterCoordinateZoomLevel,
       [latitude, longitude, zoom, true]
     );
